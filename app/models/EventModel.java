@@ -7,13 +7,14 @@ import play.libs.F.*;
 
 public class EventModel {
     
-    final ArchivedEventStream<EventModel.Event> events = new ArchivedEventStream<EventModel.Event>(100);
+    // if we want a history use ArchivedEventStream
+    final EventStream<EventModel.Event> events = new EventStream<EventModel.Event>(100);
     
     /**
      * New user joins channel
      */
     public EventStream<EventModel.Event> join() {
-        return events.eventStream();
+        return events;
     }
     
     /**

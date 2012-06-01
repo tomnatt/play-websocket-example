@@ -37,11 +37,13 @@ public class MyWebSocket extends WebSocketController {
                 for(String message: TextFrame.match(e._1)) {
                     // pass it to the central queue object
                     events.alert(message);
+                    // and echo it back to original sender
+                    outbound.send(message);
                 }
                 
                 // Case: broadcast event from the queue
                 for(EventModel.Alert alert: ClassOf(EventModel.Alert.class).match(e._2)) {
-                    // here outbound goes to all connected users
+                    // here outbound goes to all connected users except the original sender
                     outbound.send(alert.text);
                 }
                 
