@@ -1,0 +1,13 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+}
+
+#button {
+    background-color: red;
+    border-radius: 3px;
+    width: 200px;
+    height: 200px;
+    margin: 2em 5em;
+    padding: 10px 34px;
+}
