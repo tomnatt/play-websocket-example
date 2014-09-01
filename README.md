@@ -5,12 +5,13 @@ Websocket example using a broadcast, built for play 1.2.5rc4
 
 Usage:
 
-Start: play run
-Connect at: http://localhost:9000/example
-Hit the big red button
+* Start: play run
+* Connect at: http://localhost:9000/example
+* Hit the big red button
+* 
 Should see a message alerted to the screen of every browser connected to the page
 
-Notes:
+### Notes:
 
 Comments are over the top to attempt to make it clear to myself 
 what is going on - hopefully someone else will find this useful too.
